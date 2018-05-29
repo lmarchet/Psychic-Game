@@ -7,6 +7,12 @@ var losses = 0;
 var numGuesses = 9;
 var guessChoices = [];
 
+if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+    
+     
+
+
 document.onkeyup = function(event) {
 
      var guess = event.key;
@@ -47,5 +53,11 @@ document.onkeyup = function(event) {
 
     }
 };
+
+} else {
+    // The person is not logged into your app or we are unable to tell.
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+  }
 
 
