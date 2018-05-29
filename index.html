@@ -20,7 +20,16 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+      // testAPI();
+		<div id="game">
+			<h1>The Psychic Game </h1>
+			<p>Guess what letter I'm thinking of!</p>
+			<p>Wins:</p>
+			<p>Losses:</p>
+			<p>Guesses Left:</p>
+			<p>Your Guesses so far:</p>
+		</div>
+
     } else {
       // The person is not logged into your app or we are unable to tell.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -31,11 +40,11 @@
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+  // function checkLoginState() {
+  //   FB.getLoginStatus(function(response) {
+  //     statusChangeCallback(response);
+  //   });
+  // }
 
   window.fbAsyncInit = function() {
     FB.init({
@@ -97,14 +106,7 @@
 	
 	<div id="status"></div>
 
-	<div id="game">
-		<h1>The Psychic Game </h1>
-		<p>Guess what letter I'm thinking of!</p>
-		<p>Wins:</p>
-		<p>Losses:</p>
-		<p>Guesses Left:</p>
-		<p>Your Guesses so far:</p>
-	</div>
+	
 
 </body>
 </html>
